@@ -8,7 +8,7 @@
 }
 html {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--MainBgColor);
+  background-color: var(--BgColor);
 }
 a {
   text-decoration: none;
@@ -23,6 +23,13 @@ a {
   max-width: 90vw;
   margin: 0 auto;
 }
+.section-title {
+  text-align: center;
+  color: var(--MainColor);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  padding-bottom: 2rem;
+}
 @media screen and (min-width: 768px) {
   .section-center {
     width: 95vw;
@@ -35,14 +42,95 @@ ul {
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 :root {
-  --MainBgColor: #fafafa;
-  --MainColor: #ff7779;
+  --BgColor: #f4f4f9;
+  --MainColor: #011c27;
+  --Light2Color: #007ea7;
+  --Light1Color: #00c49a;
+  --CtaColor: #e53d00;
   --MainTransition: 0.3s ease all;
 }
 /* End Variables */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Header ::::::::::::::::::::: */
+.header {
+  width: 100vw;
+  text-align: center;
+  padding-top: 2rem;
+}
+.logo-container {
+  width: 100%;
+  color: var(--Light2Color);
+}
+/* Navbar */
+.nav-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.nav-links-browse {
+  display: flex;
+  justify-content: space-around;
+}
+.nav-links-browse li {
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.nav-links-browse li:hover {
+  color: var(--Light1Color);
+}
+.nav-links-user {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.nav-links-user li {
+  margin-left: 2rem;
+}
+.nav-links-user li:hover {
+  color: var(--Light1Color);
+}
+/* End Header */
+
+/* ::::::::::::::::::: Error Page ::::::::::::::::::::: */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.error-container h1 {
+  font-size: 2rem;
+  color: var(--MainColor);
+}
+.error-btn-home {
+  color: var(--CtaColor);
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  transition: var(--MainTransition);
+}
+.error-btn-home:hover {
+  transform: scale(1.1);
+}
+/* End Error */
+
+/* ::::::::::::::::::: About ::::::::::::::::::::: */
+.about-section {
+  width: 80vw;
+}
+.about-section p {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.5rem;
+}
+/* End About */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
@@ -66,10 +154,4 @@ ul {
 /* End Variables */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
-
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
-
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* End Variables */ ;
