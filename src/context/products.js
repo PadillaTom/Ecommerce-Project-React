@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import url from '../utils/URL';
+// Helpers:
+import { featuredProducts } from '../utils/helpers';
 // Context:
 export const ProductContext = React.createContext();
 
@@ -20,7 +22,10 @@ const ProductProvider = ({ children }) => {
     setLoading(true);
     // Set Products from Axios URL (Strapi : My own API)
     axios.get(`${url}/products`).then((response) => {
+      // Get Featured For Home:
+      const featured = featuredProducts(response.data);
       setProducts(response.data);
+      setFeatured(featured);
       setLoading(false);
     });
     return () => {
