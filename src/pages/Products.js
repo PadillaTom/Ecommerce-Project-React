@@ -1,5 +1,16 @@
-import React from "react";
+import React, { useContext } from 'react';
+import { ProductContext } from '../context/products';
+import Loading from '../components/Loading';
+import ProductList from '../components/Products/ProductList';
 
 export default function Products() {
-  return <h1>hello from products page</h1>;
+  // Context Response:
+  const { loading, products } = useContext(ProductContext);
+  // console.log(products); // Vemos los Products pasados del context.
+
+  // Main:
+  if (loading) {
+    return <Loading></Loading>;
+  }
+  return <ProductList title='our products' products={products}></ProductList>;
 }

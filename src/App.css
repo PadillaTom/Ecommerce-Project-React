@@ -56,6 +56,7 @@ ul {
   width: 100vw;
   text-align: center;
   padding-top: 2rem;
+  border-bottom: 1px solid var(--Light2Color);
 }
 .logo-container {
   width: 100%;
@@ -80,9 +81,11 @@ ul {
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 1px;
+  border-bottom: 1px solid transparent;
 }
 .nav-links-browse li:hover {
-  color: var(--Light1Color);
+  color: var(--CtaColor);
+  border-bottom: 1px solid var(--Light2Color);
 }
 .nav-links-user {
   display: flex;
@@ -92,9 +95,11 @@ ul {
 }
 .nav-links-user li {
   margin-left: 2rem;
+  border-bottom: 1px solid transparent;
 }
 .nav-links-user li:hover {
-  color: var(--Light1Color);
+  color: var(--CtaColor);
+  border-bottom: 1px solid var(--Light2Color);
 }
 /* End Header */
 
@@ -132,11 +137,56 @@ ul {
 }
 /* End About */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Hero ::::::::::::::::::::: */
+.hero {
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('./assets/boulangerieHero.jpg') center/cover fixed no-repeat;
+  position: relative;
+}
+.banner {
+  color: white;
+  padding-left: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.banner h1 {
+  letter-spacing: 3px;
+  font-size: 3rem;
+}
+.banner p {
+  letter-spacing: 2px;
+  color: #fafafa;
+  margin-bottom: 4rem;
+}
+.btn-hero {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--CtaColor);
+  font-size: 1.2rem;
+  transition: var(--MainTransition);
+}
+.btn-hero:hover {
+  color: white;
+  background-color: var(--CtaColor);
+}
+/* End Hero */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Loading Component ::::::::::::::::::::: */
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  text-align: center;
+}
+.loading h2 {
+  color: #e53d00;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+/* End Loading */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
