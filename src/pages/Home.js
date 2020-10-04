@@ -8,7 +8,7 @@ export default function Home() {
     <React.Fragment>
       <Hero>
         <Link to='/products' className='btn-hero'>
-          Our Products
+          Our Menu
         </Link>
       </Hero>
       <FeaturedProducts></FeaturedProducts>

@@ -10,6 +10,6 @@ export default function FeaturedProducts() {
     return <Loading></Loading>;
   }
   return (
-    <ProductList title='featured products' products={featured}></ProductList>
+    <ProductList title='featured Pizzas' products={featured}></ProductList>
   );
 }

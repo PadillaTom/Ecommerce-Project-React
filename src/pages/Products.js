@@ -12,5 +12,5 @@ export default function Products() {
   if (loading) {
     return <Loading></Loading>;
   }
-  return <ProductList title='our products' products={products}></ProductList>;
+  return <ProductList title='Nostre pizze' products={products}></ProductList>;
 }

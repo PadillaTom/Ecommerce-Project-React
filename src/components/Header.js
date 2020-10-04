@@ -8,29 +8,6 @@ export default function Header() {
       <div className='logo-container'>
         <h2>La Buona Pizza</h2>
       </div>
-      <nav className='navbar'>
-        <div className='nav-links-container'>
-          <ul className='nav-links-browse'>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/about'>About</Link>
-            </li>
-            <li>
-              <Link to='/products'>Le Pizze</Link>
-            </li>
-          </ul>
-          <ul className='nav-links-user'>
-            <li>
-              <Link to='/login'>Log In</Link>
-            </li>
-            <li>
-              <Link to='/cart'>Cart</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
     </header>
   );
 }

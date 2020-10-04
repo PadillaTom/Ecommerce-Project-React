@@ -17,7 +17,7 @@ a {
 .section {
   max-width: 100vw;
   margin: 0 auto;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .section-center {
   max-width: 90vw;
@@ -28,7 +28,7 @@ a {
   text-align: center;
   color: var(--MainColor);
   font-family: var(--TitleFont);
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
   letter-spacing: 2px;
   padding-bottom: 2rem;
@@ -48,8 +48,8 @@ ul {
   /* Colors */
   --BgColor: #fdfdfd;
   --MainColor: #8b0000;
-  --Gray1Color: #8a817c;
-  --Gray2Color: #2c302e;
+  --Gray1Color: #373534;
+  --Gray2Color: #171818;
   --BlueColor: #2d3142;
   --CtaColor: #52d557;
   /* Fonts */
@@ -66,71 +66,142 @@ ul {
 .header {
   width: 100vw;
   text-align: center;
-  padding-top: 2rem;
   border-bottom: 1px solid var(--MainColor);
+  padding: 1rem 0;
 }
 .logo-container {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 2px;
   font-family: var(--LogoFont);
   color: var(--MainColor);
 }
-/* Navbar */
-.nav-links-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  width: 95%;
-  margin: 0 auto;
-}
-.nav-links-browse {
-  display: flex;
-  justify-content: space-around;
-}
-.nav-links-browse li {
-  margin-right: 0.7rem;
-  font-family: var(--TitleFont);
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: black;
-  border-bottom: 2px solid transparent;
-  transition: var(--MainTransition);
-}
-.nav-links-browse li:hover {
-  border-bottom: 2px solid var(--MainColor);
-}
-.nav-links-user {
-  display: flex;
-}
-.nav-links-user li {
-  margin-left: 1rem;
-  font-family: var(--TitleFont);
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: black;
-  border-bottom: 2px solid transparent;
-  transition: var(--MainTransition);
-}
-.nav-links-user li:hover {
-  border-bottom: 2px solid var(--MainColor);
-}
 /* End Header */
 
+/* :::::::::::::::::::  Navbar ::::::::::::::::::::: */
+/* Desktop */
+.navbar {
+  transition: var(--MainTransition);
+}
+.nav-links-container {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .nav-links-container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  .nav-links-browse {
+    display: flex;
+    justify-content: space-around;
+  }
+  .nav-links-browse li {
+    margin-right: 0.7rem;
+    font-family: var(--TitleFont);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: black;
+    border-bottom: 2px solid transparent;
+    transition: var(--MainTransition);
+  }
+  .nav-links-browse li:hover {
+    border-bottom: 2px solid var(--MainColor);
+  }
+  .nav-links-user {
+    display: flex;
+  }
+  .nav-links-user li {
+    margin-left: 1rem;
+    font-family: var(--TitleFont);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: black;
+    border-bottom: 2px solid transparent;
+    transition: var(--MainTransition);
+  }
+  .nav-links-user li:hover {
+    border-bottom: 2px solid var(--MainColor);
+  }
+}
+/* Hamburger */
+.hamburger-container {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  color: var(--MainColor);
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.hamburger-container:hover {
+  transform: scale(1.2);
+}
+/* Dropdown */
+
+.dropdown {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--MainColor);
+  color: white;
+  font-size: 1rem;
+  font-family: var(--CtaFonts);
+  /* border-bottom: 2px solid #8b0000; */
+  transition: var(--MainTransition);
+  display: none;
+}
+.dropdown-show {
+  display: block;
+}
+.dd-division {
+  width: 70%;
+  margin: 0 auto;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.419);
+}
+.dd-users li {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.dd-users li:hover {
+  padding-left: 1rem;
+}
+.dd-links li {
+  margin-left: 1rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.dd-links li:hover {
+  padding-left: 1rem;
+}
+
 /* ::::::::::::::::::: Error Page ::::::::::::::::::::: */
+.error-page {
+  height: 70vh;
+  width: 100vw;
+}
 .error-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  top: 25%;
 }
 .error-container h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--MainColor);
   font-family: var(--TitleFont);
 }
@@ -139,6 +210,7 @@ ul {
   margin-top: 3rem;
   font-size: 1.5rem;
   transition: var(--MainTransition);
+  cursor: pointer;
 }
 .error-btn-home:hover {
   transform: scale(1.1);
@@ -148,6 +220,7 @@ ul {
 /* ::::::::::::::::::: About ::::::::::::::::::::: */
 .about-section {
   width: 80vw;
+  padding-bottom: 2rem;
 }
 .about-section p {
   width: 70%;
@@ -159,14 +232,16 @@ ul {
 
 /* ::::::::::::::::::: Hero ::::::::::::::::::::: */
 .hero {
-  height: 70vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  max-width: 100%;
+  height: 78vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('./assets/pizahero1.jpg') center/cover fixed no-repeat;
   position: relative;
+  transition: var(--MainTransition);
 }
 .banner {
   color: white;
-  padding-left: 4rem;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 0;
@@ -174,7 +249,7 @@ ul {
 }
 .banner h1 {
   letter-spacing: 3px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: var(--TitleFont);
 }
 .banner p {
@@ -214,7 +289,7 @@ ul {
 /* ::::::::::::::::::: Products Page ::::::::::::::::::::: */
 /* Products List Page */
 .products-center {
-  width: 85vw;
+  width: 90vw;
   margin: 0 auto;
 }
 /* Single Product Component */
@@ -352,11 +427,11 @@ ul {
   font-family: var(--TextsFont);
   letter-spacing: 1px;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 0.638);
 }
 .light-right {
   font-size: 2rem;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 0.898);
   transition: var(--MainTransition);
   cursor: pointer;
 }

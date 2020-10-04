@@ -13,12 +13,14 @@ import ProductDetail from './pages/ProductDetails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // Components:
 import Header from './components/Header';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 export default function App() {
   return (
     <Router>
       <Header></Header>
+      <Navbar></Navbar>
       <Switch>
         <Route path='/' exact>
           <Home></Home>
