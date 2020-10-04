@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className='header'>
       <div className='logo-container'>
-        <h2>My Store</h2>
+        <h2>La Buona Pizza</h2>
       </div>
       <nav className='navbar'>
         <div className='nav-links-container'>
@@ -18,7 +18,7 @@ export default function Header() {
               <Link to='/about'>About</Link>
             </li>
             <li>
-              <Link to='/products'>Products</Link>
+              <Link to='/products'>Le Pizze</Link>
             </li>
           </ul>
           <ul className='nav-links-user'>

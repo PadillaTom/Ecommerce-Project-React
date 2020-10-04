@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Noto+Sans+JP:wght@500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;500&display=swap');
 /* ::::::::::::::::::: Globals ::::::::::::::::::::: */
 * {
   margin: 0;
@@ -26,10 +26,11 @@ a {
 .section-title {
   text-align: center;
   color: var(--MainColor);
+  font-family: var(--TitleFont);
   font-size: 2rem;
+  text-transform: capitalize;
   letter-spacing: 2px;
   padding-bottom: 2rem;
-  text-transform: capitalize;
 }
 @media screen and (min-width: 768px) {
   .section-center {
@@ -43,11 +44,19 @@ ul {
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 :root {
-  --BgColor: #f4f4f9;
-  --MainColor: #011c27;
-  --Light2Color: #007ea7;
-  --Light1Color: #00c49a;
-  --CtaColor: #e53d00;
+  /* Colors */
+  --BgColor: #fdfdfd;
+  --MainColor: #8b0000;
+  --Gray1Color: #8a817c;
+  --Gray2Color: #2c302e;
+  --BlueColor: #2d3142;
+  --CtaColor: #52d557;
+  /* Fonts */
+  --TitleFont: 'Noto Serif', serif;
+  --TextsFont: 'Quicksand', sans-serif;
+  --CtaFonts: 'Noto Sans JP', sans-serif;
+  --LogoFont: 'Dancing Script', cursive;
+  /* Others */
   --MainTransition: 0.3s ease all;
 }
 /* End Variables */
@@ -57,11 +66,15 @@ ul {
   width: 100vw;
   text-align: center;
   padding-top: 2rem;
-  border-bottom: 1px solid var(--Light2Color);
+  border-bottom: 1px solid var(--MainColor);
 }
 .logo-container {
   width: 100%;
-  color: var(--Light2Color);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: var(--LogoFont);
+  color: var(--MainColor);
 }
 /* Navbar */
 .nav-links-container {
@@ -69,8 +82,8 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2rem;
-  width: 90%;
+  padding: 1.5rem 2rem;
+  width: 95%;
   margin: 0 auto;
 }
 .nav-links-browse {
@@ -78,29 +91,33 @@ ul {
   justify-content: space-around;
 }
 .nav-links-browse li {
-  margin-right: 1rem;
+  margin-right: 0.7rem;
+  font-family: var(--TitleFont);
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 1px;
-  border-bottom: 1px solid transparent;
+  color: black;
+  border-bottom: 2px solid transparent;
+  transition: var(--MainTransition);
 }
 .nav-links-browse li:hover {
-  color: var(--CtaColor);
-  border-bottom: 1px solid var(--Light2Color);
+  border-bottom: 2px solid var(--MainColor);
 }
 .nav-links-user {
   display: flex;
+}
+.nav-links-user li {
+  margin-left: 1rem;
+  font-family: var(--TitleFont);
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 1px;
-}
-.nav-links-user li {
-  margin-left: 2rem;
-  border-bottom: 1px solid transparent;
+  color: black;
+  border-bottom: 2px solid transparent;
+  transition: var(--MainTransition);
 }
 .nav-links-user li:hover {
-  color: var(--CtaColor);
-  border-bottom: 1px solid var(--Light2Color);
+  border-bottom: 2px solid var(--MainColor);
 }
 /* End Header */
 
@@ -114,6 +131,7 @@ ul {
 .error-container h1 {
   font-size: 2rem;
   color: var(--MainColor);
+  font-family: var(--TitleFont);
 }
 .error-btn-home {
   color: var(--CtaColor);
@@ -156,15 +174,18 @@ ul {
 .banner h1 {
   letter-spacing: 3px;
   font-size: 3rem;
+  font-family: var(--TitleFont);
 }
 .banner p {
   letter-spacing: 2px;
   color: #fafafa;
   margin-bottom: 4rem;
+  font-family: var(--TextsFont);
 }
 .btn-hero {
   padding: 0.5rem 1rem;
   border: 2px solid var(--CtaColor);
+  font-family: var(--CtaFonts);
   font-size: 1.2rem;
   transition: var(--MainTransition);
 }
@@ -303,8 +324,56 @@ ul {
 }
 /* End Product Description Page */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Footer ::::::::::::::::::::: */
+.footer-section {
+  width: 100vw;
+  border-top: 1px solid var(--MainColor);
+}
+.footer-center {
+  background: var(--Gray1Color);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer-info-light {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.light-left {
+  text-align: left;
+  padding: 1rem 0rem;
+  font-size: 1.3rem;
+  font-family: var(--TextsFont);
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.85);
+}
+.light-right {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.85);
+  transition: var(--MainTransition);
+  cursor: pointer;
+}
+.light-right > *:hover {
+  color: #52d557;
+}
+.footer-info-dark {
+  background: var(--Gray2Color);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.282);
+  padding: 0.2rem 0;
+}
+/* End Footer */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */

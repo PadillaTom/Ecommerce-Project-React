@@ -13,6 +13,7 @@ import ProductDetail from './pages/ProductDetails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // Components:
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
           <Error></Error>
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
   );
 }
