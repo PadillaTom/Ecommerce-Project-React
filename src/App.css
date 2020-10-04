@@ -22,6 +22,7 @@ a {
 .section-center {
   max-width: 90vw;
   margin: 0 auto;
+  text-align: center;
 }
 .section-title {
   text-align: center;
@@ -374,6 +375,37 @@ ul {
   padding: 0.2rem 0;
 }
 /* End Footer */
+
+/* ::::::::::::::::::: Empty Cart ::::::::::::::::::::: */
+.empty-cart-container {
+  height: 80vh;
+}
+.section-center h2 {
+  padding: 5rem;
+  font-family: var(--TitleFont);
+  color: var(--MainColor);
+}
+.btn-emptycart {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--CtaColor);
+  font-family: var(--CtaFonts);
+  font-size: 1.2rem;
+  transition: var(--MainTransition);
+}
+.btn-emptycart:hover {
+  color: white;
+  background-color: var(--CtaColor);
+}
+/* End  Empty Cart*/
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
