@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { ProductContext } from '../context/products';
 import { CartContext } from '../context/cart';
 import { useHistory } from 'react-router-dom';
-import Loading from '../components/Loading';
+// import Loading from '../components/Loading';
 
 export default function ProductDetails() {
   // Params:
@@ -18,35 +18,32 @@ export default function ProductDetails() {
   const history = useHistory();
 
   // Main:
-  if (products.length === 0) {
-    return <Loading></Loading>;
-  } else {
-    // Destructuramos el Object (Product)
-    const {
-      image: { url },
-      title,
-      price,
-      description,
-    } = product;
 
-    return (
-      <section className='single-product'>
-        <img src={url} alt={title} className='single-product-img' />
-        <article className='single-prod-info'>
-          <h1>{title}</h1>
-          <h2>${price}</h2>
-          <p>{description}</p>
-          <button
-            className='btn-add-cart'
-            onClick={() => {
-              addToCart(product);
-              history.push('/cart');
-            }}
-          >
-            add to cart
-          </button>
-        </article>
-      </section>
-    );
-  }
+  // Destructuramos el Object (Product)
+  const {
+    image: { url },
+    title,
+    price,
+    description,
+  } = product;
+
+  return (
+    <section className='single-product'>
+      <img src={url} alt={title} className='single-product-img' />
+      <article className='single-prod-info'>
+        <h1>{title}</h1>
+        <h2>${price}</h2>
+        <p>{description}</p>
+        <button
+          className='btn-add-cart'
+          onClick={() => {
+            addToCart(product);
+            history.push('/cart');
+          }}
+        >
+          add to cart
+        </button>
+      </article>
+    </section>
+  );
 }
