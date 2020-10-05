@@ -22,16 +22,11 @@ export default function ProductDetails() {
     return <Loading></Loading>;
   } else {
     // Destructuramos el Object (Product)
-    const {
-      image: { url },
-      title,
-      price,
-      description,
-    } = product;
+    const { image, title, price, description } = product;
 
     return (
       <section className='single-product'>
-        <img src={url} alt={title} className='single-product-img' />
+        <img src={image} alt={title} className='single-product-img' />
         <article className='single-prod-info'>
           <h1>{title}</h1>
           <h2>${price}</h2>
