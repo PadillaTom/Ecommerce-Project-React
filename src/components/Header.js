@@ -6,7 +6,9 @@ export default function Header() {
   return (
     <header className='header'>
       <div className='logo-container'>
-        <h2>La Buona Pizza</h2>
+        <h2>
+          <Link to='/'>La Buona Pizza</Link>
+        </h2>
       </div>
     </header>
   );

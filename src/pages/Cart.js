@@ -17,5 +17,26 @@ export default function Cart() {
   }
 
   // Main:
-  return <h1>hello from cart page</h1>;
+  return (
+    <section className='section cart-section'>
+      <div className='section-center'>
+        <h2 className='section-title'>Your Cart</h2>
+        <div className='cart-items-container'>
+          {cart.map((item) => {
+            return <CartItem key={item.id} {...item}></CartItem>;
+          })}
+          <h2 className='cart-total'>Total: ${total}</h2>
+        </div>
+        {user ? (
+          <Link to='/checkout' className='btn-checkout'>
+            Checkout
+          </Link>
+        ) : (
+          <Link to='/login' className='btn-checkout'>
+            Login
+          </Link>
+        )}
+      </div>
+    </section>
+  );
 }

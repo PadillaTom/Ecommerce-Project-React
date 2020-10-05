@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineBars } from 'react-icons/ai';
+import CartLink from '../components/Cart/CartLink';
 
 export default function Navbar() {
   // Dropdown:
@@ -25,7 +26,7 @@ export default function Navbar() {
             <Link to='/login'>Log In</Link>
           </li>
           <li>
-            <Link to='/cart'>Cart</Link>
+            <CartLink></CartLink>
           </li>
         </ul>
       </div>
@@ -41,7 +42,7 @@ export default function Navbar() {
             <Link to='/login'>Log In</Link>
           </li>
           <li>
-            <Link to='/cart'>Cart</Link>
+            <CartLink></CartLink>
           </li>
         </ul>
         <div className='dd-division'></div>

@@ -51,7 +51,7 @@ ul {
   --Gray1Color: #373534;
   --Gray2Color: #171818;
   --BlueColor: #2d3142;
-  --CtaColor: #52d557;
+  --CtaColor: #9efca1;
   /* Fonts */
   --TitleFont: 'Noto Serif', serif;
   --TextsFont: 'Quicksand', sans-serif;
@@ -152,7 +152,7 @@ ul {
   margin: 0 auto;
   background-color: var(--MainColor);
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: var(--CtaFonts);
   /* border-bottom: 2px solid #8b0000; */
   transition: var(--MainTransition);
@@ -455,7 +455,7 @@ ul {
 .empty-cart-container {
   height: 80vh;
 }
-.section-center h2 {
+.empty-cart-title {
   padding: 5rem;
   font-family: var(--TitleFont);
   color: var(--MainColor);
@@ -473,14 +473,122 @@ ul {
 }
 /* End  Empty Cart*/
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Cart Page ::::::::::::::::::::: */
+.cart-section {
+  min-height: 50vh;
+}
+.cart-items-container {
+  /*-----> Container for single articles*/
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+.cart-total {
+  color: var(--MainColor);
+  font-family: var(--TitleFont);
+  margin-top: 1.5rem;
+}
+.btn-checkout {
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  background: var(--MainColor);
+  border: 1px solid black;
+  color: white;
+  padding: 0.5rem 2rem;
+  margin-bottom: 2rem;
+}
+/* End Cart Page */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Cart Item Component ::::::::::::::::::::: */
+.cart-item {
+  border: 1px solid #37353441;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.single-item-img {
+  width: 100%;
+  margin: 1.5rem auto;
+}
+.cart-info-container {
+  align-self: center;
+}
+.cart-info-container h4 {
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  color: var(--MainColor);
+  margin-bottom: 0.5rem;
+}
+.cart-info-container h5 {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+.btn-remove {
+  color: #373534;
+  font-size: 0.7rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.btn-remove:hover {
+  color: var(--MainColor);
+}
+.cart-amount-container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.btn-amount {
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: var(--MainTransition);
+  background: #96969609;
+  color: var(--MainColor);
+  border-radius: 1rem;
+}
+.btn-amount > * {
+  transition: var(--MainTransition);
+}
+.btn-amount:hover > * {
+  transform: scale(1.3);
+}
+.cart-amount {
+  font-family: var(--TextsFont);
+  font-weight: 400;
+}
+/* End Cart Item */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Cart Link Component ::::::::::::::::::::: */
+.cart-link-container {
+  display: flex;
+  gap: 1rem;
+}
+.cart-amount-container {
+  position: relative;
+}
+.cart-amount-container > * {
+  font-size: 1.6rem;
+}
+.cart-amount-number {
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: white;
+  color: var(--MainColor);
+  z-index: 1;
+}
+/* End Cart Link */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */

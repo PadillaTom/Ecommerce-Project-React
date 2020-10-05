@@ -6,7 +6,7 @@ export default function EmptyCart() {
     <section className='section'>
       <div className='section-center'>
         <div className='empty-cart-container'>
-          <h2>Empty Cart...</h2>
+          <h2 className='empty-cart-title'>Empty Cart...</h2>
           <Link to='/products' className='btn btn-emptycart'>
             See Products
           </Link>
