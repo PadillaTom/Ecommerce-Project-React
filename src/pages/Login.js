@@ -13,7 +13,7 @@ export default function Login() {
   // const value = React.useContext(UserContext);
   // console.log(value);
   // 2) Function real:
-  const { userLogin } = React.useContext(UserContext);
+  const { userLogin, alert, showAlert } = React.useContext(UserContext);
 
   // States:
   const [email, setEmail] = useState('myaccount@myaccount.com');
@@ -56,10 +56,14 @@ export default function Login() {
       const newUser = { token, username };
       // Pasamos la data como LOGGED IN
       userLogin(newUser);
-      // Una vez Logged In, Pusheamos a Products
+      // Una vez Logged IN:
+      // Alertamos
+      showAlert({ msg: `"${username}" Logged In` });
+      // Pusheamos a Products
       history.push('/products');
     } else {
       // Show Alert
+      showAlert({ msg: `Log In Error`, type: 'danger' });
     }
   };
   // Main:

@@ -28,9 +28,23 @@ function UserProvider({ children }) {
     localStorage.removeItem('user');
   };
 
+  // ALERTS for User Logs (This could be another context itself)
+  const [alert, setAlert] = React.useState({
+    show: false, // Show or NOT
+    msg: '', // To show
+    type: 'success', // CSS Style
+  });
+  const showAlert = ({ type = 'success', msg }) => {
+    setAlert({ show: true, msg, type });
+  };
+  const hideAlert = () => {
+    setAlert({ ...alert, show: false });
+  };
   // Main:
   return (
-    <UserContext.Provider value={{ user, userLogin, userLogout }}>
+    <UserContext.Provider
+      value={{ user, userLogin, userLogout, alert, showAlert, hideAlert }}
+    >
       {children}
     </UserContext.Provider>
   );

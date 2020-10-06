@@ -15,11 +15,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Alert from './components/Alert';
 
 export default function App() {
   return (
     <Router>
       <Header></Header>
+      <Alert></Alert>
       <Navbar></Navbar>
       <Switch>
         <Route path='/' exact>

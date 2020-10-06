@@ -671,9 +671,50 @@ ul {
   letter-spacing: 1.2px;
   color: var(--MainColor);
 }
-
 /* End User Interface */
 
+/* ::::::::::::::::::: Alert Component ::::::::::::::::::::: */
+.alert-container {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 12px rgb(0, 0, 0);
+}
+.alert-show {
+  background-color: green;
+}
+.alert-danger {
+  background-color: red;
+}
+.alert {
+  position: relative;
+}
+.alert p {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding: 2rem 3rem;
+}
+.alert button {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* End Alert Component */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
 
