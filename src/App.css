@@ -594,8 +594,85 @@ ul {
 }
 /* End Cart Link */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: User Interface Log In ::::::::::::::::::::: */
+.form-section {
+  height: 75vh;
+}
+.login-form {
+  width: 90vw;
+  border: 1px solid rgba(0, 0, 0, 0.364);
+  margin: 0 auto;
+}
+.form-control {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+.form-control label {
+  align-self: flex-start;
+  text-transform: capitalize;
+  font-family: var(--TextsFont);
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  color: var(--MainColor);
+}
+.form-control input {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid rgba(111, 111, 111, 0.446);
+  padding: 0.5rem 0;
+  color: rgb(106, 106, 106);
+}
+.form-control input::placeholder {
+  color: lightgray;
+}
+.form-btns-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-empty {
+  color: var(--MainColor);
+  text-align: center;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  padding: 1rem 0;
+  font-weight: 600;
+}
+.btn-form {
+  margin: 1rem auto;
+  text-align: center;
+  background: transparent;
+  border: 1px solid var(--MainColor);
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  transition: var(--MainTransition);
+  letter-spacing: 1.2px;
+}
+.register-link {
+  margin: 1rem auto;
+  font-size: 0.8rem;
+  color: #2e2e2eb1;
+}
+.register-link button {
+  margin-left: 0.5rem;
+  text-align: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: var(--MainTransition);
+  letter-spacing: 1.2px;
+  color: var(--MainColor);
+}
+
+/* End User Interface */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */

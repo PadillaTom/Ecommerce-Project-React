@@ -8,15 +8,16 @@ import { UserContext } from '../context/user';
 
 export default function Login() {
   const history = useHistory();
-  // User Context: 1) Comprobamos que funcione:
+  // User Context:
+  // 1) Comprobamos que funcione:
   // const value = React.useContext(UserContext);
   // console.log(value);
   // 2) Function real:
   const { userLogin } = React.useContext(UserContext);
 
   // States:
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('myaccount@myaccount.com');
+  const [password, setPassword] = useState('password');
   const [username, setUsername] = useState('default');
   const [isMember, setIsMember] = useState(true);
   // Check for Empty Input values:
@@ -65,7 +66,7 @@ export default function Login() {
   return (
     <section className='section form-section'>
       <h2 className='section-title'>{isMember ? 'Sign In' : 'Register'}</h2>
-      <form className='form login-form'>
+      <form className='login-form'>
         {/* Single Input */}
         <div className='form-control'>
           <label htmlFor='email'>Email</label>
@@ -101,22 +102,23 @@ export default function Login() {
           </div>
         )}
         {/* End Single Input Username */}
-
-        {/* Empty Form Text */}
-        {isEmpty && <p className='form-empty'>Please Fill Out the Form.</p>}
-        {/* Submit BTN */}
-        {!isEmpty && (
-          <button type='button' className='btn-form' onClick={handleSubmit}>
-            Submit
-          </button>
-        )}
-        {/* Register */}
-        <p className='register-link'>
-          {isMember ? 'Need to register?' : 'Aleardy a member?'}
-          <button type='button' onClick={toggleMember}>
-            Click Here
-          </button>
-        </p>
+        <div className='form-btns-container'>
+          {/* Empty Form Text */}
+          {isEmpty && <p className='form-empty'>Please Fill Out the Form.</p>}
+          {/* Submit BTN */}
+          {!isEmpty && (
+            <button type='button' className='btn-form' onClick={handleSubmit}>
+              Submit
+            </button>
+          )}
+          {/* Register */}
+          <p className='register-link'>
+            {isMember ? 'Need to register?' : 'Aleardy a member?'}
+            <button type='button' onClick={toggleMember}>
+              Click Here
+            </button>
+          </p>
+        </div>
       </form>
     </section>
   );
