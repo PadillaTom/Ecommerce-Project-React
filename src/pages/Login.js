@@ -21,7 +21,7 @@ export default function Login() {
   const [username, setUsername] = useState('default');
   const [isMember, setIsMember] = useState(true);
   // Check for Empty Input values:
-  let isEmpty = !email || !password || !username;
+  let isEmpty = !email || !password || !username || alert.show;
   // Toggle Member:
   const toggleMember = () => {
     // Antes de ser member: Check the username

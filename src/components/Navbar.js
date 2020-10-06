@@ -2,10 +2,17 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineBars } from 'react-icons/ai';
 import CartLink from '../components/Cart/CartLink';
+import { UserContext } from '../context/user';
+import LoginLink from '../components/LoginLink';
 
 export default function Navbar() {
+  // User Context:
+  const { user } = React.useContext(UserContext);
+
   // Dropdown:
   const [ddShow, setDdShow] = useState(false);
+
+  // Main:
   return (
     <nav className='navbar'>
       {/* Desktop */}
@@ -22,8 +29,13 @@ export default function Navbar() {
           </li>
         </ul>
         <ul className='nav-links-user'>
+          {user.token && (
+            <li>
+              <Link to='/checkout'>Checkout</Link>
+            </li>
+          )}
           <li>
-            <Link to='/login'>Log In</Link>
+            <LoginLink></LoginLink>
           </li>
           <li>
             <CartLink></CartLink>
@@ -38,8 +50,13 @@ export default function Navbar() {
       {/* Sidebar */}
       <div className={`dropdown ${ddShow && 'dropdown-show'}`}>
         <ul className='dd-users' onClick={() => setDdShow(!ddShow)}>
+          {user.token && (
+            <li>
+              <Link to='/checkout'>Checkout</Link>
+            </li>
+          )}
           <li>
-            <Link to='/login'>Log In</Link>
+            <LoginLink></LoginLink>
           </li>
           <li>
             <CartLink></CartLink>

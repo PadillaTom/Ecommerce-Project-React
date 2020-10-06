@@ -145,8 +145,8 @@ ul {
 .hamburger-container:hover {
   transform: scale(1.2);
 }
-/* Dropdown */
 
+/* Dropdown */
 .dropdown {
   width: 100%;
   margin: 0 auto;
@@ -184,6 +184,20 @@ ul {
 }
 .dd-links li:hover {
   padding-left: 1rem;
+}
+/*  ------> Login BTN */
+.login-link-btn-desk {
+  display: none;
+}
+.login-link-btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: var(--CtaFonts);
+  color: white;
+  transition: var(--MainTransition);
+  cursor: pointer;
 }
 
 /* ::::::::::::::::::: Error Page ::::::::::::::::::::: */
@@ -710,7 +724,6 @@ ul {
   background-color: transparent;
   cursor: pointer;
 }
-
 /* End Alert Component */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */

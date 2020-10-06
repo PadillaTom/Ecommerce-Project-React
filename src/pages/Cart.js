@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/cart';
+import { UserContext } from '../context/user';
 import EmptyCart from '../components/Cart/EmptyCart';
 import CartItem from '../components/Cart/CartItem';
 import { Link } from 'react-router-dom';
@@ -7,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export default function Cart() {
   // User Context
-  let user = false;
+  const { user } = useContext(UserContext);
 
   // Cart Context:
   const { cart, total } = useContext(CartContext);
@@ -27,7 +28,7 @@ export default function Cart() {
           })}
           <h2 className='cart-total'>Total: ${total}</h2>
         </div>
-        {user ? (
+        {user.token ? (
           <Link to='/checkout' className='btn-checkout'>
             Checkout
           </Link>
