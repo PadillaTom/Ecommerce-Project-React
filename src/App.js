@@ -16,6 +16,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Alert from './components/Alert';
+import PrivateRoute from './components/PrivateRoute';
 
 export default function App() {
   return (
@@ -33,9 +34,9 @@ export default function App() {
         <Route path='/cart'>
           <Cart></Cart>
         </Route>
-        <Route path='/checkout'>
+        <PrivateRoute path='/checkout'>
           <Checkout></Checkout>
-        </Route>
+        </PrivateRoute>
         <Route path='/login'>
           <Login></Login>
         </Route>

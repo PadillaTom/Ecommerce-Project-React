@@ -372,6 +372,7 @@ ul {
 .single-product {
   width: 70%;
   margin: 3rem auto;
+  min-height: 69vh;
 }
 .single-product-img {
   width: 100%;
@@ -662,12 +663,14 @@ ul {
   margin: 1rem auto;
   text-align: center;
   background: transparent;
-  border: 1px solid var(--MainColor);
+  border: 2px solid var(--MainColor);
   padding: 0.5rem 2rem;
   cursor: pointer;
   border-radius: 0.2rem;
   transition: var(--MainTransition);
   letter-spacing: 1.2px;
+  font-weight: 600;
+  color: var(--MainColor);
 }
 .register-link {
   margin: 1rem auto;
@@ -726,8 +729,48 @@ ul {
 }
 /* End Alert Component */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Checkout Form ::::::::::::::::::::: */
+.checkout-section {
+  width: 100vw;
+  height: 81vh;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.371);
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  height: 25rem;
+}
+.checkout-form h3 {
+  text-align: center;
+  margin: 1rem auto;
+  font-family: var(--CtaFonts);
+  letter-spacing: 1.3px;
+}
+.checkout-form h3 span {
+  color: var(--MainColor);
+}
+.stripe-input {
+  margin: 1rem auto;
+  width: 90%;
+}
+.stripe-input label {
+  color: black;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+.stripe-info {
+  color: #1718189c;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+/* End Checkout Form */
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
 
